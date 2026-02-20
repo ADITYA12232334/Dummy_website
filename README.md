@@ -49,10 +49,25 @@ A comprehensive web application vulnerability scanner portal with real-time prog
     npm run dev
     ```
 
+4.  **Setup ZAP Worker**:
+    ```bash
+    cd ../worker
+    # Install Python dependencies
+    pip install requests redis python-owasp-zap-v24
+    
+    # Set environment variables (optional)
+    # export REDIS_URL=redis://127.0.0.1:6379
+    # export ZAP_PROXY=http://127.0.0.1:8080
+    
+    # Run the worker
+    python worker.py
+    ```
+
 ## 📂 Project Structure
 
 -   `backend/`: Rust source code, database migrations, and job processing logic.
 -   `frontend/`: React application, UI components, and API integration.
+-   `worker/`: Python scripts for ZAP automation and Redis job processing.
 -   `reports/`: (Generated) Directory for scan reports.
 
 ## 🤝 Contributing
